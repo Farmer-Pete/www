@@ -1,0 +1,4 @@
+*.pyc
+output
+content/.thumbs
+ssh_user.sh

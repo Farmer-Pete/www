@@ -1,0 +1,192 @@
+#page > header nav ul li.Big_Data a {
+    color: rgb(158, 186, 125);
+    border-color: rgb(158, 186, 125);
+}
+
+section.boxes article.box.categoryBig_Data {
+    background: rgb(158, 186, 125);
+    border-color: rgb(158, 186, 125);
+}
+section#content.categoryBig_Data h2,
+section#content.categoryBig_Data h3 {
+    box-shadow: 0px 0px 15px rgb(158, 186, 125);
+    background: rgb(158, 186, 125);
+}
+section#content.categoryBig_Data a {
+    color: rgb(79, 93, 62);
+}
+section#content.categoryBig_Data div.summary img {
+    border-color: rgb(158, 186, 125);
+}
+section#content.categoryBig_Data span.icon.icon-small span.icon-tag {
+    background-color: rgb(158, 186, 125);
+}
+section#content.categoryBig_Data span.icon.icon-small span.icon-tag:before {
+    border-color: rgb(158, 186, 125) transparent transparent rgb(158, 186, 125) !important;
+}
+section#content.categoryBig_Data span.icon.icon-small span.icon-tag:after {
+    border-color: rgb(158, 186, 125) rgb(158, 186, 125) transparent transparent !important;
+}
+section#content.categoryBig_Data code {
+    background: rgb(79, 93, 62);
+}
+#page > header nav ul li.Linux a {
+    color: rgb(79, 202, 174);
+    border-color: rgb(79, 202, 174);
+}
+
+section.boxes article.box.categoryLinux {
+    background: rgb(79, 202, 174);
+    border-color: rgb(79, 202, 174);
+}
+section#content.categoryLinux h2,
+section#content.categoryLinux h3 {
+    box-shadow: 0px 0px 15px rgb(79, 202, 174);
+    background: rgb(79, 202, 174);
+}
+section#content.categoryLinux a {
+    color: rgb(39, 101, 87);
+}
+section#content.categoryLinux div.summary img {
+    border-color: rgb(79, 202, 174);
+}
+section#content.categoryLinux span.icon.icon-small span.icon-tag {
+    background-color: rgb(79, 202, 174);
+}
+section#content.categoryLinux span.icon.icon-small span.icon-tag:before {
+    border-color: rgb(79, 202, 174) transparent transparent rgb(79, 202, 174) !important;
+}
+section#content.categoryLinux span.icon.icon-small span.icon-tag:after {
+    border-color: rgb(79, 202, 174) rgb(79, 202, 174) transparent transparent !important;
+}
+section#content.categoryLinux code {
+    background: rgb(39, 101, 87);
+}
+#page > header nav ul li.Coding a {
+    color: rgb(118, 147, 195);
+    border-color: rgb(118, 147, 195);
+}
+
+section.boxes article.box.categoryCoding {
+    background: rgb(118, 147, 195);
+    border-color: rgb(118, 147, 195);
+}
+section#content.categoryCoding h2,
+section#content.categoryCoding h3 {
+    box-shadow: 0px 0px 15px rgb(118, 147, 195);
+    background: rgb(118, 147, 195);
+}
+section#content.categoryCoding a {
+    color: rgb(59, 73, 97);
+}
+section#content.categoryCoding div.summary img {
+    border-color: rgb(118, 147, 195);
+}
+section#content.categoryCoding span.icon.icon-small span.icon-tag {
+    background-color: rgb(118, 147, 195);
+}
+section#content.categoryCoding span.icon.icon-small span.icon-tag:before {
+    border-color: rgb(118, 147, 195) transparent transparent rgb(118, 147, 195) !important;
+}
+section#content.categoryCoding span.icon.icon-small span.icon-tag:after {
+    border-color: rgb(118, 147, 195) rgb(118, 147, 195) transparent transparent !important;
+}
+section#content.categoryCoding code {
+    background: rgb(59, 73, 97);
+}
+#page > header nav ul li.Security a {
+    color: rgb(116, 79, 174);
+    border-color: rgb(116, 79, 174);
+}
+
+section.boxes article.box.categorySecurity {
+    background: rgb(116, 79, 174);
+    border-color: rgb(116, 79, 174);
+}
+section#content.categorySecurity h2,
+section#content.categorySecurity h3 {
+    box-shadow: 0px 0px 15px rgb(116, 79, 174);
+    background: rgb(116, 79, 174);
+}
+section#content.categorySecurity a {
+    color: rgb(58, 39, 87);
+}
+section#content.categorySecurity div.summary img {
+    border-color: rgb(116, 79, 174);
+}
+section#content.categorySecurity span.icon.icon-small span.icon-tag {
+    background-color: rgb(116, 79, 174);
+}
+section#content.categorySecurity span.icon.icon-small span.icon-tag:before {
+    border-color: rgb(116, 79, 174) transparent transparent rgb(116, 79, 174) !important;
+}
+section#content.categorySecurity span.icon.icon-small span.icon-tag:after {
+    border-color: rgb(116, 79, 174) rgb(116, 79, 174) transparent transparent !important;
+}
+section#content.categorySecurity code {
+    background: rgb(58, 39, 87);
+}
+#page > header nav ul li.Tools a {
+    color: rgb(170, 105, 173);
+    border-color: rgb(170, 105, 173);
+}
+
+section.boxes article.box.categoryTools {
+    background: rgb(170, 105, 173);
+    border-color: rgb(170, 105, 173);
+}
+section#content.categoryTools h2,
+section#content.categoryTools h3 {
+    box-shadow: 0px 0px 15px rgb(170, 105, 173);
+    background: rgb(170, 105, 173);
+}
+section#content.categoryTools a {
+    color: rgb(85, 52, 86);
+}
+section#content.categoryTools div.summary img {
+    border-color: rgb(170, 105, 173);
+}
+section#content.categoryTools span.icon.icon-small span.icon-tag {
+    background-color: rgb(170, 105, 173);
+}
+section#content.categoryTools span.icon.icon-small span.icon-tag:before {
+    border-color: rgb(170, 105, 173) transparent transparent rgb(170, 105, 173) !important;
+}
+section#content.categoryTools span.icon.icon-small span.icon-tag:after {
+    border-color: rgb(170, 105, 173) rgb(170, 105, 173) transparent transparent !important;
+}
+section#content.categoryTools code {
+    background: rgb(85, 52, 86);
+}
+#page > header nav ul li.Security a {
+    color: rgb(202, 138, 78);
+    border-color: rgb(202, 138, 78);
+}
+
+section.boxes article.box.categorySecurity {
+    background: rgb(202, 138, 78);
+    border-color: rgb(202, 138, 78);
+}
+section#content.categorySecurity h2,
+section#content.categorySecurity h3 {
+    box-shadow: 0px 0px 15px rgb(202, 138, 78);
+    background: rgb(202, 138, 78);
+}
+section#content.categorySecurity a {
+    color: rgb(101, 69, 39);
+}
+section#content.categorySecurity div.summary img {
+    border-color: rgb(202, 138, 78);
+}
+section#content.categorySecurity span.icon.icon-small span.icon-tag {
+    background-color: rgb(202, 138, 78);
+}
+section#content.categorySecurity span.icon.icon-small span.icon-tag:before {
+    border-color: rgb(202, 138, 78) transparent transparent rgb(202, 138, 78) !important;
+}
+section#content.categorySecurity span.icon.icon-small span.icon-tag:after {
+    border-color: rgb(202, 138, 78) rgb(202, 138, 78) transparent transparent !important;
+}
+section#content.categorySecurity code {
+    background: rgb(101, 69, 39);
+}

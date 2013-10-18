@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+<meta name="description" content="{{article.summary|striptags|escape}}" />
+<meta name="keywords" content="{{article.category}}, {%for tag in article.tags%}{{tag.name}}{%if not loop.last%}, {%endif%}{%endfor%}" />
+{% endblock %}
+
+{% block body_class %}article{% endblock %}
+
+{% block title %} {{ article.title|striptags|escape }} - {{ SITENAME }} {% endblock %}
+
+{% block banner -%}
+    <a href="{{ pagename }}" rel="bookmark" title="Permalink to {{ article.title|striptags|escape }}">{{ article.title }}</a>
+{%- endblock %}
+
+{% block content %}        
+<section id="content" class="category{{ article.category }}">
+        <header>
+            <div class="summary kicker">
+                <img src="{{ SITEURL }}/.thumbs/{{ article.slug }}.png" alt="{{ article.title|striptags|escape }}" />
+                {{ article.summary }}
+                <div class="clear"></div>
+            </div>
+        </header>
+
+        <div class="entry-content">
+            {{ article.content }}
+            {# <p><span class="drop-cap">{{ article.content[3] }}</span>{{ article.content[4:] }} #}
+        </div>
+
+        <h2>Contact Me</h2>
+        <div class="entry-contact">
+            <p>Was this helpful? Spot an error? Send me a comment!</p>
+            <form action="{{ SITEURL }}/mailer.php" method="POST">
+                <input name="title" type="hidden" value="{{ article.title }}"/>
+                <input name="url" type="hidden" value="{{SITEURL}}/{{ article.url }}" />
+
+                <input name="name" type="text" title="Your name" class="defaultText name"/>
+                <input name="email" type="text" title="Your email" class="defaultText email"/>
+
+                <textarea cols="30" name="comment" rows="10" title="Type your comment here (all other fields optional)" class="defaultText"></textarea>
+                <input type="submit" type="submit" value="Send" />
+            </form>
+        <div>
+        {#<footer class="post-info">
+            <abbr class="published" title="{{ article.date.isoformat() }}">
+                    {{ article.locale_date }}
+            </abbr>
+            {% if article.author %}
+            <address class="vcard author">
+                    By <a class="url fn" href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+            </address>
+            {% endif %}
+        </footer>#}
+</section>
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+{% endblock %}

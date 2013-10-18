@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+<meta name="description" content="LinuxLefty's blog. Contains articles on coding, Linux and all kinds of other things" />
+<meta name="keywords" content="Linux, python, coding, tools, programming, scripting" />
+{% endblock %}
+
+{% block body_class%}boxes{% endblock %}
+
+{% block banner %} <p style="position:absolute;top:-1000px">LinuxLefty</p> {% endblock %}
+
+{% block content -%}
+<section class="boxes">
+    
+    {% if not articles_page.has_previous() %}
+    <article class="box welcome">
+        <strong>Howdy!</strong> My name is <strong>Peter</strong> (also known as <strong>LinuxLefty</strong>). This is my little corner of the web; whenever I <strong>stumble across</strong> or <strong>learn</strong> anything <strong>useful</strong> or <strong>interesting</strong>, I put it up here so I don't forget. <strong>Thanks</strong> for visiting and I <strong>hope</strong> you find something <strong>helpful</strong> or at least <strong>entertaining</strong> ^_^
+    </article>
+    {% endif %}
+    {% for article in articles_page.object_list -%}
+    <article class="box category{{ article.category }}">
+                <header>
+                <div class="post-category h1"> {{ article.category.name.replace('_', ' ') }} </div>
+                <h2 class="post-title">
+                    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags|escape }}">
+                        {{ article.title }}
+                    </a>
+                </h2>
+                <div class="thumbnail">
+                    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags|escape }}">
+                        <img src="{{ SITEURL }}/.thumbs/{{ article.slug }}.png" alt="{{ article.title|striptags|escape }}" />
+                    </a>
+                </div>
+                </header>
+                <div class="summary"> {{ article.summary }} </div>
+                <footer>
+                    {#<div class="published date">
+                        {{ article.locale_date }}
+                    </div>#}
+                    {%- if article.tags %}
+                        <div class="tags">
+                            {%- for tag in article.tags -%}
+                                <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag.name }}</a>
+                                {%- if not loop.last %}, {% endif -%}
+                            {%- endfor %}
+                        </div>
+                    {%- endif %}
+                </footer>
+        </article>
+    {%- endfor %}
+</section>
+<div class="clear"></div>
+
+</ol><!-- /#posts-list -->
+<nav class="paginator">
+    {% if articles_page.has_previous() %}
+        {% if articles_page.previous_page_number() == 1 %}
+            <a href="{{ SITEURL }}/{{ page_name }}.html" rel="prev">&laquo;</a>
+        {% else %}
+            <a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.previous_page_number() }}.html" rel="prev">&laquo;</a>
+        {% endif %}
+    {% endif %}
+    Page {{ articles_page.number }} / {{ articles_paginator.num_pages }}
+    {% if articles_page.has_next() %}
+        <a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html" rel="next">&raquo;</a>
+    {% endif %}
+</nav>
+{% endblock content %}

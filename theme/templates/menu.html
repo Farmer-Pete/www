@@ -1,0 +1,22 @@
+<nav id="menu"><ul>
+    {%- if MENUITEMS -%}
+        {% for title, link in MENUITEMS -%}
+            <li><a href="{{ link }}">{{ title }}</a></li>
+        {%- endfor %}
+    {%- endif -%}
+    {%- if DISPLAY_PAGES_ON_MENU -%}
+        <li><b>Pages</b><ul>
+        {% for p in PAGES -%}
+            <li {% if p == page %}class="active"{% endif %}>
+                <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
+            </li>
+        {%- endfor %}
+        </ul></li>
+    {%- endif %}
+    <li><b>Categories</b><ul>
+    {% for cat, null in categories -%}
+        <li {% if cat == category %}class="active"{% endif %}>
+            <a href="{{ SITEURL }}/category/{{cat}}.html">{{ cat }}</a>
+        </li>
+    {%- endfor %}
+</ul></nav>
