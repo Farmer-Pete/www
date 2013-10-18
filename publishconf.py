@@ -18,8 +18,8 @@ CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
-CATEGORY_URL = '{name}'
-CATEGORY_SAVE_AS = '{name}/index.html'
+CATEGORY_URL = '{slug}'
+CATEGORY_SAVE_AS = '{slug}/index.html'
 
 # Following items are often useful when publishing
 

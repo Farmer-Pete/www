@@ -42,8 +42,8 @@ TYPOGRIFY = True
 ARTICLE_URL = '{category}/{slug}.html'
 ARTICLE_SAVE_AS = '{category}/{slug}.html'
 
-CATEGORY_URL = '{name}/index.html'
-CATEGORY_SAVE_AS = '{name}/index.html'
+CATEGORY_URL = '{slug}/index.html'
+CATEGORY_SAVE_AS = '{slug}/index.html'
 
 TAG_URL = 'tag/{slug}.html'
 TAG_SAVE_AS = 'tag/{slug}.html'

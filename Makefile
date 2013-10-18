@@ -1,4 +1,4 @@
-PY=python-2.7
+PY=python2.7
 PELICAN=pelican
 PELICANOPTS=
 
@@ -29,7 +29,7 @@ SSH_HOST=linuxlefty.com
 SSH_TARGET_DIR=www/linuxlefty
 SSH_USER=$(shell $(BASEDIR)/ssh_user.sh)
 
-GIT_CHANGES=$(shell git ls-files --other --exclude-standard --directory --no-empty-directory)
+GIT_CHANGES=$(shell git status --porcelain)
 
 help:
 	@echo 'Makefile for a pelican Web site                                        '
@@ -42,6 +42,8 @@ help:
 	@echo '   make serve [PORT=8000]           serve site at http://localhost:8000'
 	@echo '   make devserver [PORT=8000]       start/restart develop_server.sh    '
 	@echo '   make stopserver                  stop local server                  '
+	@echo '   make deploy                      deploy content to production       '
+	@echo '   make spider                      spider contents, checking for broken links'
 	@echo '                                                                       '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html'
 	@echo '                                                                       '
@@ -90,4 +92,7 @@ endif
 	rsync -rav --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 endif
 
-.PHONY: html help clean regenerate serve devserver publish deploy
+spider: publish
+	wget --spider -r -p -P /tmp http://localhost/linuxlefty
+
+.PHONY: html help clean regenerate serve devserver publish deploy spider

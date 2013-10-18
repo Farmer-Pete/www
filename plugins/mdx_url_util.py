@@ -80,8 +80,11 @@ class UrlUtil_autotags(markdown.postprocessors.Postprocessor):
         result = self.RE_tag.sub(capture_tags, text)
         result = self.RE_cat.sub(handle_categories, result)
 
+        # Strip out all empty tags
+        tags = sorted(_ for _ in tags if _)
+
         if tags:
-            self.markdown.Meta['tags'] = [', '.join(tags)] 
+            self.markdown.Meta['tags'] = [', '.join(tags)]
 
         return result
 
