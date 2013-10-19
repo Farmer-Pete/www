@@ -16,6 +16,7 @@ After some digging, I [stumbled across this gem][spasswd.c]. I cleaned up and co
 
 This script reads a username and password from standard input and then returns `0` if the username/password was valid and `1` if it was invalid.
 
+    #!c
     /*************************
     * Source of spasswd.c
     *************************/
@@ -99,6 +100,7 @@ Bash
 Python
 ------
 
+    #!python
     import subprocess
     
     username = 'buggs'
@@ -116,8 +118,8 @@ Python
 PHP
 ---
 
+    #!php
     <?php
-
     $username = 'buggs';
     $password = 'bunny';
     $spasswd = '/usr/local/bin/spasswd';

@@ -24,47 +24,48 @@ Bash goodness
 
 Without further adieu,
 
-      #!/bin/bash
-      
-      # Configure a list of hostnames or IP address separated by whitespace
-      HOSTS=( )
-      
-      # Check to see if sshpass is installed
-      which sshpass > /dev/null 2&>1 || ( echo "FATAL: sshpass is not installed"; exit )
-      
-      # Get password from user
-      read -s -p "password for $(whoami): " SSHPASS
-      export SSHPASS
+    #!/bin/bash
+    
+    # Configure a list of hostnames or IP address separated by whitespace
+    HOSTS=( )
+    
+    # Check to see if sshpass is installed
+    which sshpass > /dev/null 2&>1 || ( echo "FATAL: sshpass is not installed"; exit )
+    
+    # Get password from user
+    read -s -p "password for $(whoami): " SSHPASS
+    export SSHPASS
 
-      # Generate SSH key if needed
-      if ! [ -f ~/.ssh/id_dsa ] && ! [ -f ~/.ssh/id_dsa.pub ]; then
-         mkdir -p ~/.ssh
-         ssh-keygen -b 1024 -f ~/.ssh/id_dsa -t dsa -P '' -C ''
-      fi
+    # Generate SSH key if needed
+    if ! [ -f ~/.ssh/id_dsa ] && ! [ -f ~/.ssh/id_dsa.pub ]; then
+        mkdir -p ~/.ssh
+        ssh-keygen -b 1024 -f ~/.ssh/id_dsa -t dsa -P '' -C ''
+    fi
 
-      for host in ${HOSTS[@]}; do
-         echo "Installing key on $host ..."
-         # Copy ssh key over to remote server
-         sshpass -e scp -o StrictHostKeyChecking=no ~/.ssh/id_dsa.pub $host:
+    for host in ${HOSTS[@]}; do
+        echo "Installing key on $host ..."
+        # Copy ssh key over to remote server
+        sshpass -e scp -o StrictHostKeyChecking=no ~/.ssh/id_dsa.pub $host:
 
-         # Now put it into authorized_keys and set permissions
-         sshpass -e ssh $host 'mkdir -p ~/.ssh; touch ~/.ssh/authorized_keys; cat id_dsa.pub ~/.ssh/authorized_keys | sort | uniq > $$; mv $$ ~/.ssh/authorized_keys; chmod 700 ~/.ssh; chmod 600 ~/.ssh/*; rm id_dsa.pub'
+        # Now put it into authorized_keys and set permissions
+        sshpass -e ssh $host 'mkdir -p ~/.ssh; touch ~/.ssh/authorized_keys; cat id_dsa.pub ~/.ssh/authorized_keys | sort | uniq > $$; mv $$ ~/.ssh/authorized_keys; chmod 700 ~/.ssh; chmod 600 ~/.ssh/*; rm id_dsa.pub'
 
-         ssh $host "echo '    key sucessfully installed on $host'"
+        ssh $host "echo '    key sucessfully installed on $host'"
 
-      done
+    done
 
 The only configuration you will need to set is the `HOSTS` variable. Note that the hosts/IPs (as a [Bash](tag:bash) array) should be separated by **whitespace**, not a comma. For example:
 
-      HOSTS = (
-         LinuxLefty-1
-         LinuxLefty-2
-         LinuxLefty-3
-         LinuxLefty-4
-         LinuxLefty-5
-         LinuxLefty-6
-         LinuxLefty-7
-      )
+    #!bash
+    HOSTS=(
+        LinuxLefty-1
+        LinuxLefty-2
+        LinuxLefty-3
+        LinuxLefty-4
+        LinuxLefty-5
+        LinuxLefty-6
+        LinuxLefty-7
+    )
 
 Explaining the code
 --------------------
@@ -92,14 +93,14 @@ Line 27
 
 As promised, here is breakdown of line 25:
 
-      #!bash
-      mkdir -p ~/.ssh
-      touch ~/.ssh/authorized_keys
-      cat id_dsa.pub ~/.ssh/authorized_keys | sort | uniq > $$
-      mv $$ ~/.ssh/authorized_keys
-      chmod 700 ~/.ssh
-      chmod 600 ~/.ssh/*
-      rm id_dsa.pub
+    #!bash
+    mkdir -p ~/.ssh
+    touch ~/.ssh/authorized_keys
+    cat id_dsa.pub ~/.ssh/authorized_keys | sort | uniq > $$
+    mv $$ ~/.ssh/authorized_keys
+    chmod 700 ~/.ssh
+    chmod 600 ~/.ssh/*
+    rm id_dsa.pub
 
 <div class="code" markdown=1>
 
@@ -122,7 +123,8 @@ Note
 
 You can safely ignore any warnings such as:
 
-      Warning: Permanently added 'LinuxLefty-1,192.16.74.10' (RSA) to the list of known hosts
+    #!text
+    Warning: Permanently added 'LinuxLefty-1,192.16.74.10' (RSA) to the list of known hosts
 
 [SSH](tag:SSH) is just letting you know that it adding a known host instead of prompting you (which is what we want). This is a result of the `-o StrictHostKeyChecking=no` we are passing to SSH on line 25.
 

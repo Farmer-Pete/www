@@ -7,6 +7,7 @@ Introduction
 
 While trying to do an [HBase](tag:HBase) Export vis [MapReduce](tag:MapReduce), I kept getting "lease does not exist" [errors](tag:error):
 
+    #!text
     2012-03-23 19:07:00,114 ERROR org.apache.hadoop.security.UserGroupInformation: PriviledgedActionException as:root (auth:SIMPLE) cause:org.apache.hadoop.hbase.regionserver.LeaseException: org.apache.hadoop.hbase.regionserver.LeaseException: lease '5896698310771141325' does not exist
     at org.apache.hadoop.hbase.regionserver.Leases.removeLease(Leases.java:230)
     at org.apache.hadoop.hbase.regionserver.HRegionServer.next(HRegionServer.java:1879)

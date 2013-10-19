@@ -9,17 +9,18 @@ I've been using [Linux](tag:Linux) for years now and have messed with ( and some
 
 However, I've never really stopped to think about exactly what these entries mean:
 
-      # (0) Arch Linux
-      title  Arch Linux
-      root   (hd0,0)
-      kernel /vmlinuz-linux cryptdevice=/dev/sda3:root root=/dev/mapper/root ro
-      initrd /initramfs-linux.img
-      
-      # (1) Arch Linux
-      title  Arch Linux Fallback
-      root   (hd0,0)
-      kernel /vmlinuz-linux cryptdevice=/dev/sda3:root root=/dev/mapper/root ro
-      initrd /initramfs-linux-fallback.img
+    #!text
+    # (0) Arch Linux
+    title  Arch Linux
+    root   (hd0,0)
+    kernel /vmlinuz-linux cryptdevice=/dev/sda3:root root=/dev/mapper/root ro
+    initrd /initramfs-linux.img
+    
+    # (1) Arch Linux
+    title  Arch Linux Fallback
+    root   (hd0,0)
+    kernel /vmlinuz-linux cryptdevice=/dev/sda3:root root=/dev/mapper/root ro
+    initrd /initramfs-linux-fallback.img
 
 When I did stop to think about it ... I had no clue what `vmlinuz` or `initramfs` were or what the difference between them was.
 
@@ -47,22 +48,25 @@ Obviously this may be different for various distros, but here is how I looked in
 
 First, some prep work ... we're going to create a safe place to work with the img file ... initramfs **really** isn't something you want to mess with `;)`
 
-      mkdir /tmp/initramfs
-      cp /boot/initramfs-linux.img /tmp/initramfs/initramfs-linux.img.gz # Put the .gz extension so we can extract it
-      cd /tmp/initramfs
-      gunzip initramfs-linux.img.gz
+    #!text
+    mkdir /tmp/initramfs
+    cp /boot/initramfs-linux.img /tmp/initramfs/initramfs-linux.img.gz # Put the .gz extension so we can extract it
+    cd /tmp/initramfs
+    gunzip initramfs-linux.img.gz
 
 There is a chance that your initramfs won't be gzip compressed and can skip the `gunzip` phases. To check, run `file` and look at the result
 
-      [linuxlefty@localhost] file /boot/initramfs-linux.img
-      /boot/initramfs-linux.img: gzip compressed data, from Unix, last modified: Mon Mar 19 09:35:23 2012
+    #!text
+    [linuxlefty@localhost] file /boot/initramfs-linux.img
+    /boot/initramfs-linux.img: gzip compressed data, from Unix, last modified: Mon Mar 19 09:35:23 2012
 
 Now feel free to peek inside with your favorite editor ([Vim](tag:Vim), of course). The first part is a bunch of [shell](tag:Bash) functions followed by the disk image.
 
 Now, it's time to extract this puppy! ( you might need to install [cpio][] if it isn't already installed )
 
-      cd /tmp/initramfs/
-      cpio -i --make-directories < initramfs-linux.img
+    #!bash
+    cd /tmp/initramfs/
+    cpio -i --make-directories < initramfs-linux.img
 
 Now you can poke around and see what lives tucked inside `:)`
 

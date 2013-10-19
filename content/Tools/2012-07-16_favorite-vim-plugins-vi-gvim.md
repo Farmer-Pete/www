@@ -16,7 +16,7 @@ Sorry, got carried away there. `:)` Anyhow, one thing that makes [Vim](tag:Vim) 
 
 One of the frustrations I've had in the past with [Vim's](tag:Vim) plugins is that things get really messy, really fast. Files get scattered all throughout the `~/.vim` directory and trying to keep track of what plugins you have installed is a chore. [Pathogen][] comes to the rescue by organizing everything into _bundles_. Everything goes neatly into their own directory inside of `~/.vim/bundles`. In addition, since everything is in its own directory, you can easily pull things down via [git](tag:git). Then updating all your plugins can be done with the tiny [bash](tag:Bash) script listed below. _Beautiful_.
 
-    #!/bin/bash
+    #!bash
     for dir in ~/.vim/bundle/*; do
         pushd $dir
         git pull
@@ -25,7 +25,7 @@ One of the frustrations I've had in the past with [Vim's](tag:Vim) plugins is th
 
 ### Installation ###
 
-    #!/bin/bash
+    #!bash
     mkdir -p ~/.vim/autoload ~/.vim/bundle
     curl -so ~/.vim/autoload/pathogen.vim \
         https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
@@ -53,7 +53,7 @@ Enter [Ctrl-P][]:
 
 ### Installation ###
 
-    #!/bin/bash
+    #!bash
     git clone https://github.com/kien/ctrlp.vim ~/.vim/bundles/ctrlp.vim
 
 ### Demo ###
@@ -74,7 +74,7 @@ We've all been there ... somewhere in the mist of your spaghetti [code](cat:codi
 
 ### Installation ###
 
-    #!/bin/bash
+    #!bash
     git clone https://github.com/kien/rainbow_parentheses.vim ~/.vim/bundles/rainbow_parentheses.vim
 
 ### Demo ###
@@ -95,7 +95,7 @@ One of my friends loves [Emacs][] (see!? We _can_ co-exist peacefully `;)` ) and
 
 ### Installation ###
 
-    #!/bin/bash
+    #!bash
     git clone https://github.com/chilicuil/conque ~/.vim/bundles/conque
 
 ### Demo ###
@@ -117,7 +117,7 @@ What EasyMotion does is provide you with the command `\\w` which displays a visu
 
 ### Installation ###
 
-    #!/bin/bash
+    #!bash
     git clone https://github.com/Lokaltog/vim-easymotion ~/.vim/bundles/vim-easymotion
 
 ### Demo ###
@@ -145,7 +145,7 @@ A few of my favorite features:
 
 ### Installation ###
 
-    #!/bin/bash
+    #!bash
     git clone https://github.com/tpope/vim-fugitive ~/.vim/bundles/vim-fugitive
 
 ### Demo ###
@@ -165,7 +165,7 @@ Every editor supports undo, but Vim just doesn't do undo (that would be _waaay_ 
 
 ### Installation ###
 
-    #!/bin/bash
+    #!bash
     git clone http://github.com/sjl/gundo.vim.git ~/.vim/bundle/gundo
 
 ### Demo ###
@@ -185,7 +185,7 @@ Every editor supports undo, but Vim just doesn't do undo (that would be _waaay_ 
 
 ### Installation ###
 
-    #!/bin/bash
+    #!bash
     git clone https://github.com/nathanaelkane/vim-indent-guides ~/.vim/bundles/vim-indent-guides
 
 ### Demo ###
@@ -203,7 +203,7 @@ _I didn't make a demo for this one, it's fairly self explanatory, yes?_
 
 ### Installation ###
 
-    #!/bin/bash
+    #!bash
     git clone https://github.com/edsono/vim-matchit ~/.vim/bundles/vim-matchit
 
 ### Demo ###
@@ -223,7 +223,7 @@ I regularly need to generate data files for work. In the bad 'ol days, creating 
 
 ### Installation ###
 
-    #!/bin/bash
+    #!bash
     git clone https://github.com/tpope/vim-speeddating ~/.vim/bundles/vim-speeddating
 
 ### Demo ###
@@ -247,7 +247,7 @@ When pasting from the default buffer with `p`, this plugin allows you to do `met
 
 ### Installation ###
 
-    #!/bin/bash
+    #!bash
     git clone https://github.com/maxbrunsfeld/vim-yankstack ~/.vim/bundles/vim-yankstack
 
 ### Demo ###
@@ -269,7 +269,7 @@ So taking our earlier example, `{ 1, 2, 3 }`, `cs{[` will result in `[ 1, 2, 3 ]
 
 ### Installation ###
 
-    #!/bin/bash
+    #!bash
     git clone https://github.com/tpope/vim-surround ~/.vim/bundles/vim-surround
 
 ### Demo ###
