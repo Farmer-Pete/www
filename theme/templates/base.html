@@ -45,7 +45,7 @@
                 {%- endif %}
                 {% for cat, null in categories -%}
                 <li class="{% if cat == category %}active{% else %}inactive{% endif %} {{ cat }}">
-                        <a href="{{ SITEURL }}/{{cat}}/index.html">&nbsp;{{ cat.name.replace('_', ' ') }}&nbsp;</a>
+                        <a href="{{ SITEURL }}/{{cat.slug}}/index.html">&nbsp;{{ cat.name.replace('_', ' ') }}&nbsp;</a>
                     </li>
                 {%- endfor %}
             </ul></nav>

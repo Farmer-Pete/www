@@ -15,7 +15,7 @@
 {%- endblock %}
 
 {% block content %}        
-<section id="content" class="category{{ article.category }}">
+<section id="content" class="category{{ article.category|striptags }}">
         <header>
             <div class="summary kicker">
                 <img src="{{ SITEURL }}/.thumbs/{{ article.slug }}.png" alt="{{ article.title|striptags|escape }}" />
@@ -33,7 +33,7 @@
         <div class="entry-contact">
             <p>Was this helpful? Spot an error? Send me a comment!</p>
             <form action="{{ SITEURL }}/mailer.php" method="POST">
-                <input name="title" type="hidden" value="{{ article.title }}"/>
+                <input name="title" type="hidden" value="{{ article.title|striptags }}"/>
                 <input name="url" type="hidden" value="{{SITEURL}}/{{ article.url }}" />
 
                 <input name="name" type="text" title="Your name" class="defaultText name"/>
