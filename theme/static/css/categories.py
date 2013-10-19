@@ -1,7 +1,6 @@
 import random
 import string
 
-
 class ColorGen(object):
     def __init__(self):
         random.seed('LinuxLefty')
@@ -63,8 +62,9 @@ class ColorGen(object):
 
 CATEGORIES = [
     'Big_Data', 'Linux' , 'Coding',
-    'Security', 'Tools', 'Security'
+    'Security', 'Tools'
 ]
+CATEGORIES.sort()
 
 TEMPLATE = string.Template('''\
 #page > header nav ul li.${label} a {
@@ -84,7 +84,9 @@ section#content.category${label} h3 {
 section#content.category${label} a {
     color: ${color_dark};
 }
-section#content.category${label} div.summary img {
+section#content.category${label} div.summary img,
+section#content.category${label} img,
+section#content.category${label} svg {
     border-color: ${color};
 }
 section#content.category${label} span.icon.icon-small span.icon-tag {
@@ -97,7 +99,8 @@ section#content.category${label} span.icon.icon-small span.icon-tag:after {
     border-color: ${color} ${color} transparent transparent !important;
 }
 section#content.category${label} code {
-    background: ${color_dark};
+    background: ${color_light};
+    color: inherit;
 }
 ''')
 

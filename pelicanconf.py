@@ -32,7 +32,7 @@ TRANSLATION_FEED_ATOM = None
 
 DEFAULT_PAGINATION = 10
 
-MD_EXTENSIONS = [ 'codehilite', 'extra', 'url_util' ]
+MD_EXTENSIONS = [ 'codehilite', 'extra', 'url_util', 'graphviz' ]
 PLUGINS = [ 'thumber' ]
 PLUGIN_PATH = _ROOT + '/plugins'
 STATIC_PATHS = [".thumbs"]
@@ -68,3 +68,14 @@ if not os.path.exists(_CSS + '/categories.css') or os.stat(_CSS + '/categories.p
     categories.gen(_CSS + '/categories.css')
     del sys.path[-1]
 
+# Monkey-patch typogrify to only apply the following filters:
+#   * widont
+#   * smartypants (using smartypants directly to suppress warning of smartyPants vs smartypants)
+# I experienced bugs with other filters (especially caps) which prompted this hack
+
+import typogrify.filters
+import smartypants
+typogrify.filters.typogrify = \
+    lambda text: typogrify.filters.smartypants(
+        smartypants.smartypants(text)
+    )

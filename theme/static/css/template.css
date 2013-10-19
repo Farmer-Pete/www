@@ -81,6 +81,10 @@ section.boxes article.box * {
     color: #112;
 }
 
+section.boxes article.box code {
+    color: #D0D0D0;
+}
+
 section.boxes article.box .h1 {
     text-align: center;
     color: #FFF;
@@ -144,6 +148,23 @@ section#content h3 {
     border: 1px white solid;
     border-bottom-color: #272f31;
     border-right-color: #272f31;
+}
+
+section#content svg, section#content img {
+    border: 5px transparent solid;
+    display: block;
+    background: white;
+    margin: 1em;
+}
+
+section#content img {
+    margin: auto;
+    padding: 5px;
+}
+
+section#content div.svgWrapper {
+    width: 80%;
+    margin: auto;
 }
 
 section#content div.summary img {
