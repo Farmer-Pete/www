@@ -46,8 +46,8 @@ class UrlUtil_autotags(markdown.postprocessors.Postprocessor):
     RE_tag = re.compile(r'''<a\ href="tag:([^"]+)">([^<]+)</a>''')
     RE_cat = re.compile(r'''<a\ href="cat:([^"]+)">([^<]+)</a>''')
 
-    SUB_tag = '''<a href="%(url)s" title="See posts tagged with '%(tag_str)s'">%(label)s</a><span class="icon icon-small"><span class="icon-tag"></span></span>'''
-    SUB_cat = '''<a href="%(url)s" title="See posts which exist the '%(category_str)s' category">%(label)s</a><span class="icon icon-small"><span class="icon-tag"></span></span>'''
+    SUB_tag = '''<a href="%(url)s" title="See posts tagged with '%(tag_str)s'">%(label)s</a><span class="icon"><span class="icon-tag"></span></span>'''
+    SUB_cat = '''<a href="%(url)s" title="See posts which exist the '%(category_str)s' category">%(label)s</a><span class="icon"><span class="icon-tag"></span></span>'''
 
     def run(self, text):
 

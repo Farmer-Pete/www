@@ -41,12 +41,23 @@ h2, h2 a {
     text-decoration: none;
 }
 
+img {
+    max-width: 100% !important;
+}
+
 body.article .kicker {
     border-top: double 3px #333;
     border-bottom: double 3px #333;
     padding: 1em 0em;
     margin: 3em auto;
     width: 700px;
+}
+
+@media (max-width:979px) {
+    body.article .kicker {
+        width: 100%;
+    }
+    
 }
 
 body.article .kicker img {
@@ -176,11 +187,6 @@ section#content div.summary img {
     background-color: #EEE;
 }
 
-section#content span.icon.icon-small {
-    float: none;
-    display: inline-block;
-}
-
 section#content div.entry-contact {
     width: 75%;
     margin: auto;
@@ -254,17 +260,23 @@ section#content div.entry-contact input[type=submit] {
     color: #86C8FF;
 }
 
-
 #page {
     margin-top:1em;
     margin-bottom:3em;
     margin-left:10%;
     margin-right:10%;
-    min-width:400px;
+    max-width: 100%;
+}
+
+@media (max-width:480px) {
+    #page {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 #page > header {
-    margin-left: 3em;
+    margin-left: 4em;
     margin-right: 4em;
     margin-bottom: .3em;
     text-align:center;
@@ -273,15 +285,21 @@ section#content div.entry-contact input[type=submit] {
 #page header a#logo {
     position: relative;
     height: 100px;
-    width: 314px;
+    width: 305px;
     margin: auto;
     display: block;
+    max-width: 100%;
 }
 
-#page header a#logo img {
+#page header a#logo span {
     position: absolute;
     top: 0px;
     left: 0px;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 #page > header nav {
@@ -304,6 +322,10 @@ section#content div.entry-contact input[type=submit] {
     padding-left: 3%;
 }
 
+#page > header nav ul li.navi_label {
+    display: none;
+}
+
 #page > header nav ul li a {
     text-decoration: none;
     border-bottom: 5px solid;
@@ -320,14 +342,6 @@ section#content div.entry-contact input[type=submit] {
     bottom: 5px;
 }
 
-/*
-#page > header nav ul li a:hover {
-    border-bottom: 20px solid;
-    border-top: 10px solid;
-    bottom: 15px;
-}
-*/
-
 #page > header nav ul li.home a {
     color: #FFF;
     border-color: #FFF;
@@ -340,14 +354,104 @@ section#content div.entry-contact input[type=submit] {
     bottom: -5px;
 }
 
-body.article-list #page > header nav ul li.home a {
+body.home #page > header nav ul li.home a {
     display: none;
 }
 
+@media (max-width:1280px) {
+    #page > header nav ul li {
+        padding-left: 0;
+    }
+    #page > header nav ul li a {
+        padding: 0px 0px;
+    }
+}
+
+@media (max-width:1024px) {
+
+    #page > header nav {
+        font-weight: bold;
+        height: 100%;
+    }
+
+    #page > header nav ul {
+        text-align: center;
+        font-size: 16pt;
+        width: 100%;
+        margin: 0;
+        position: static;
+    }
+
+    #page > header nav ul li.navi_label {
+        color: white;
+        text-align: left;
+    }
+
+    #page > header nav ul li.home span {
+        position: static;
+        bottom: 0px;
+    }
+
+    #page > header nav ul li.home a {
+        color: #272f31 !important;
+        background: white;
+    }
+
+    #page > header nav ul li.home a:hover {
+        background: #DDD;
+    }
+
+    #page > header nav ul li {
+        list-style: none;
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #page > header nav ul li a {
+        display: block;
+        width: 100%;
+        color: #FFF !important;
+        text-decoration: none;
+        position: static;
+        padding: 0;
+        border: 0;
+    }
+
+    #page > header nav ul li.active a {
+        border: 0;
+        bottom: 0;
+    }
+
+    #page > header nav ul li.active a:before {
+        content: "»";
+    }
+
+    #page > header nav ul li.active a:after {
+        content: "«";
+    }
+
+    #page > header nav ul li:hover a:before {
+        content: "«";
+    }
+
+    #page > header nav ul li:hover a:after {
+        content: "»";
+    }
+
+}
+
+@media (max-width:480px) {
+    #page > header {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+}
 
 #page #main {
     background: white;
-    margin-left: 18px;
     position: relative;
     border: 10px solid white;
     border-radius: 30px;
@@ -501,6 +605,18 @@ code {
     white-space: nowrap;
     padding: 0px 2px;
 }
+
+@media (max-width:480px) {
+    code {
+        white-space: normal;
+        -ms-word-break: break-all;
+        word-break: break-all;
+
+        /* Non standard for webkit */
+        word-break: break-word;
+    }
+}
+
 dd pre {
     padding: 10px 10px;
 }
@@ -518,4 +634,55 @@ dd pre {
 }
 .hidden {
     display: none;
+}
+
+/*
+ * Snipped from Cikonss v1.0
+ * URL: https://github.com/zzap/Cikonss
+ * License: MIT License
+ */
+
+/* Generals */
+.icon {
+	/* don't change width and height in order to change the size of the icon,
+	you can control the size with font-size for different class(es) - below */
+	line-height: 100%;
+	width: 1em;
+	height: 1em;
+	position: relative;
+    font-size: 1em; /* icon-small */
+    /* Changes for LinuxLefty */
+	float: none;
+    display: inline-block;
+}
+
+/* Tag */
+.icon-tag {
+	position: absolute;
+	top: 0;
+	left: .25em;
+	width: .5em;
+	height: .75em;
+	background-color: rgb(102, 102, 102); /* #666 */
+	/* for browsers that supports */
+	border-top-left-radius: .0625em;
+	border-top-right-radius: .0625em;
+}
+.icon-tag:before,
+.icon-tag:after {
+	content: "";
+	position: absolute;
+	top: .75em;
+	width: 0;
+	height: 0;
+	border-width: .125em;
+	border-style: solid;
+}
+.icon-tag:before {
+	left: 0;
+	border-color: rgb(102, 102, 102) transparent transparent rgb(102, 102, 102); /* #666 */
+}
+.icon-tag:after {
+	left: .25em;
+	border-color: rgb(102, 102, 102) rgb(102, 102, 102) transparent transparent; /* #666 */
 }

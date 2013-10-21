@@ -3,6 +3,16 @@
     border-color: rgb(158, 186, 125);
 }
 
+@media (max-width:1024px) {
+    #page > header nav ul li.Big_Data a {
+        background: rgb(158, 186, 125);
+    }
+    #page > header nav ul li.Big_Data:hover a {
+        background: rgb(79, 93, 62);
+        text-shadow: 1px 1px 1px rgb(206, 220, 190);
+    }
+}
+
 section.boxes article.box.categoryBig_Data {
     background: rgb(158, 186, 125);
     border-color: rgb(158, 186, 125);
@@ -20,13 +30,13 @@ section#content.categoryBig_Data img,
 section#content.categoryBig_Data svg {
     border-color: rgb(158, 186, 125);
 }
-section#content.categoryBig_Data span.icon.icon-small span.icon-tag {
+section#content.categoryBig_Data span.icon span.icon-tag {
     background-color: rgb(158, 186, 125);
 }
-section#content.categoryBig_Data span.icon.icon-small span.icon-tag:before {
+section#content.categoryBig_Data span.icon span.icon-tag:before {
     border-color: rgb(158, 186, 125) transparent transparent rgb(158, 186, 125) !important;
 }
-section#content.categoryBig_Data span.icon.icon-small span.icon-tag:after {
+section#content.categoryBig_Data span.icon span.icon-tag:after {
     border-color: rgb(158, 186, 125) rgb(158, 186, 125) transparent transparent !important;
 }
 section#content.categoryBig_Data code {
@@ -36,6 +46,16 @@ section#content.categoryBig_Data code {
 #page > header nav ul li.Coding a {
     color: rgb(79, 202, 174);
     border-color: rgb(79, 202, 174);
+}
+
+@media (max-width:1024px) {
+    #page > header nav ul li.Coding a {
+        background: rgb(79, 202, 174);
+    }
+    #page > header nav ul li.Coding:hover a {
+        background: rgb(39, 101, 87);
+        text-shadow: 1px 1px 1px rgb(167, 228, 214);
+    }
 }
 
 section.boxes article.box.categoryCoding {
@@ -55,13 +75,13 @@ section#content.categoryCoding img,
 section#content.categoryCoding svg {
     border-color: rgb(79, 202, 174);
 }
-section#content.categoryCoding span.icon.icon-small span.icon-tag {
+section#content.categoryCoding span.icon span.icon-tag {
     background-color: rgb(79, 202, 174);
 }
-section#content.categoryCoding span.icon.icon-small span.icon-tag:before {
+section#content.categoryCoding span.icon span.icon-tag:before {
     border-color: rgb(79, 202, 174) transparent transparent rgb(79, 202, 174) !important;
 }
-section#content.categoryCoding span.icon.icon-small span.icon-tag:after {
+section#content.categoryCoding span.icon span.icon-tag:after {
     border-color: rgb(79, 202, 174) rgb(79, 202, 174) transparent transparent !important;
 }
 section#content.categoryCoding code {
@@ -71,6 +91,16 @@ section#content.categoryCoding code {
 #page > header nav ul li.Linux a {
     color: rgb(118, 147, 195);
     border-color: rgb(118, 147, 195);
+}
+
+@media (max-width:1024px) {
+    #page > header nav ul li.Linux a {
+        background: rgb(118, 147, 195);
+    }
+    #page > header nav ul li.Linux:hover a {
+        background: rgb(59, 73, 97);
+        text-shadow: 1px 1px 1px rgb(186, 201, 225);
+    }
 }
 
 section.boxes article.box.categoryLinux {
@@ -90,13 +120,13 @@ section#content.categoryLinux img,
 section#content.categoryLinux svg {
     border-color: rgb(118, 147, 195);
 }
-section#content.categoryLinux span.icon.icon-small span.icon-tag {
+section#content.categoryLinux span.icon span.icon-tag {
     background-color: rgb(118, 147, 195);
 }
-section#content.categoryLinux span.icon.icon-small span.icon-tag:before {
+section#content.categoryLinux span.icon span.icon-tag:before {
     border-color: rgb(118, 147, 195) transparent transparent rgb(118, 147, 195) !important;
 }
-section#content.categoryLinux span.icon.icon-small span.icon-tag:after {
+section#content.categoryLinux span.icon span.icon-tag:after {
     border-color: rgb(118, 147, 195) rgb(118, 147, 195) transparent transparent !important;
 }
 section#content.categoryLinux code {
@@ -106,6 +136,16 @@ section#content.categoryLinux code {
 #page > header nav ul li.Security a {
     color: rgb(116, 79, 174);
     border-color: rgb(116, 79, 174);
+}
+
+@media (max-width:1024px) {
+    #page > header nav ul li.Security a {
+        background: rgb(116, 79, 174);
+    }
+    #page > header nav ul li.Security:hover a {
+        background: rgb(58, 39, 87);
+        text-shadow: 1px 1px 1px rgb(185, 167, 214);
+    }
 }
 
 section.boxes article.box.categorySecurity {
@@ -125,13 +165,13 @@ section#content.categorySecurity img,
 section#content.categorySecurity svg {
     border-color: rgb(116, 79, 174);
 }
-section#content.categorySecurity span.icon.icon-small span.icon-tag {
+section#content.categorySecurity span.icon span.icon-tag {
     background-color: rgb(116, 79, 174);
 }
-section#content.categorySecurity span.icon.icon-small span.icon-tag:before {
+section#content.categorySecurity span.icon span.icon-tag:before {
     border-color: rgb(116, 79, 174) transparent transparent rgb(116, 79, 174) !important;
 }
-section#content.categorySecurity span.icon.icon-small span.icon-tag:after {
+section#content.categorySecurity span.icon span.icon-tag:after {
     border-color: rgb(116, 79, 174) rgb(116, 79, 174) transparent transparent !important;
 }
 section#content.categorySecurity code {
@@ -141,6 +181,16 @@ section#content.categorySecurity code {
 #page > header nav ul li.Tools a {
     color: rgb(170, 105, 173);
     border-color: rgb(170, 105, 173);
+}
+
+@media (max-width:1024px) {
+    #page > header nav ul li.Tools a {
+        background: rgb(170, 105, 173);
+    }
+    #page > header nav ul li.Tools:hover a {
+        background: rgb(85, 52, 86);
+        text-shadow: 1px 1px 1px rgb(212, 180, 214);
+    }
 }
 
 section.boxes article.box.categoryTools {
@@ -160,13 +210,13 @@ section#content.categoryTools img,
 section#content.categoryTools svg {
     border-color: rgb(170, 105, 173);
 }
-section#content.categoryTools span.icon.icon-small span.icon-tag {
+section#content.categoryTools span.icon span.icon-tag {
     background-color: rgb(170, 105, 173);
 }
-section#content.categoryTools span.icon.icon-small span.icon-tag:before {
+section#content.categoryTools span.icon span.icon-tag:before {
     border-color: rgb(170, 105, 173) transparent transparent rgb(170, 105, 173) !important;
 }
-section#content.categoryTools span.icon.icon-small span.icon-tag:after {
+section#content.categoryTools span.icon span.icon-tag:after {
     border-color: rgb(170, 105, 173) rgb(170, 105, 173) transparent transparent !important;
 }
 section#content.categoryTools code {

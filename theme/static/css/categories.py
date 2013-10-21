@@ -72,6 +72,16 @@ TEMPLATE = string.Template('''\
     border-color: ${color};
 }
 
+@media (max-width:1024px) {
+    #page > header nav ul li.${label} a {
+        background: ${color};
+    }
+    #page > header nav ul li.${label}:hover a {
+        background: ${color_dark};
+        text-shadow: 1px 1px 1px ${color_light};
+    }
+}
+
 section.boxes article.box.category${label} {
     background: ${color};
     border-color: ${color};
@@ -89,13 +99,13 @@ section#content.category${label} img,
 section#content.category${label} svg {
     border-color: ${color};
 }
-section#content.category${label} span.icon.icon-small span.icon-tag {
+section#content.category${label} span.icon span.icon-tag {
     background-color: ${color};
 }
-section#content.category${label} span.icon.icon-small span.icon-tag:before {
+section#content.category${label} span.icon span.icon-tag:before {
     border-color: ${color} transparent transparent ${color} !important;
 }
-section#content.category${label} span.icon.icon-small span.icon-tag:after {
+section#content.category${label} span.icon span.icon-tag:after {
     border-color: ${color} ${color} transparent transparent !important;
 }
 section#content.category${label} code {
