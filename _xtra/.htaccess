@@ -7,7 +7,7 @@ RewriteEngine on
 RewriteCond %{http_host} ^www\.linuxlefty\.com [nc]
 RewriteRule ^(.*)$ http://linuxlefty.com/$1 [r=301,nc]
 
-ErrorDocument 404 /404.html
+ErrorDocument 404 /404.php
 
 AddType text/html;charset=UTF-8 html
 AddType text/plain;charset=UTF-8 txt

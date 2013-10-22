@@ -79,6 +79,7 @@ stopserver:
 
 publish: clean
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+	chmod -v 644 $(BASEDIR)/_xtra/*.php
 	rsync -rav $(BASEDIR)/_xtra/ $(OUTPUTDIR)/
 
 deploy: publish
