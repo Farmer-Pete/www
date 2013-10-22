@@ -7,7 +7,7 @@ Introduction
 
 I love [Vim][]. I've used it for years and I still feel like I'm just scratching the surface of this tool. I'll part with my browser, I'll switch [shells][zsh], and if work requires it, I'll even begrudgingly relinquish my [operating system](tag:Linux) (heresy!) ... but you'll have to pry my editor from my cold, dead hands.
 
-Sorry, got carried away there. `:)` Anyhow, one thing that makes [Vim](tag:Vim) so great is its [plugins][]. Recently I came across some really fantastic [plugins](tag:plugins) which have really enhanced my Vim experience. Although there are so many to choose from, I'm only listing ones that I use on a regular basis.
+Sorry, got carried away there. `:)` Anyhow, one thing that makes [Vim](tag:Vim) so great is its [plugins][]. Recently I came across some really fantastic [plugins](tag:plugin) which have really enhanced my Vim experience. Although there are so many to choose from, I'm only listing ones that I use on a regular basis.
 
 1: Pathogen
 ------------

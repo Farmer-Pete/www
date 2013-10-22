@@ -1,5 +1,4 @@
 Title: 
-Tags: 
-Summary: 
 Thumb: 
 Status: draft
+Summary: 

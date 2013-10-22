@@ -5,7 +5,7 @@ Thumb: http://cdn.morguefile.com/imageData/public/files/d/danielito/preview/fldr
 The problem
 ------------
 
-I built a [web development](tag:web_application) on a system in which users all had a [Linux](tag:Linux) system account. Instead of forcing users to maintain two usernames and [passwords](tag:password), I wanted the application to [authenticate](tag:security) against the system accounts. Unfortunately, there is no straightforward way to accomplish this. However, never fear! [C](tag:C) to the rescue! `:D`
+I built a [web development](tag:web_development) on a system in which users all had a [Linux](tag:Linux) system account. Instead of forcing users to maintain two usernames and [passwords](tag:password), I wanted the application to [authenticate](tag:security) against the system accounts. Unfortunately, there is no straightforward way to accomplish this. However, never fear! [C](tag:C) to the rescue! `:D`
 
 The Solution
 ------------
