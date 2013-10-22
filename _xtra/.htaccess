@@ -4,8 +4,8 @@ Options +SymLinksIfOwnerMatch
 RewriteEngine on
 
 # For SEO linuxlefty.com => www.linuxlefty.com
-RewriteCond %{http_host} ^linuxlefty\.com [nc]
-RewriteRule ^(.*)$ http://www.linuxlefty.com/$1 [r=301,nc]
+RewriteCond %{http_host} ^www\.linuxlefty\.com [nc]
+RewriteRule ^(.*)$ http://linuxlefty.com/$1 [r=301,nc]
 
 ErrorDocument 404 /404.html
 

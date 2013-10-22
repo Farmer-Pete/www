@@ -78,8 +78,8 @@ stopserver:
 	@echo 'Stopped Pelican and SimpleHTTPServer processes running in background.'
 
 publish: clean
-	cp -fr $(BASEDIR)/_xtra/* $(OUTPUTDIR)
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+	rsync -rav $(BASEDIR)/_xtra/ $(OUTPUTDIR)/
 
 deploy: publish
 ifeq ($(strip $(SSH_USER)),)
