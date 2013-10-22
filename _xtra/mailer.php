@@ -40,7 +40,7 @@ mail($to, $subject, $message, $headers);
 <html>
 <head>
     <title>Thanks for your message!</title>
-    <link href="template.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="/theme/css/template.css" rel="stylesheet" type="text/css" media="screen" />
     <style type="text/css">
         #page #main #main_inner {
             padding: 1em;
