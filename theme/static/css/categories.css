@@ -41,6 +41,7 @@ section#content.categoryBig_Data span.icon span.icon-tag:after {
 }
 section#content.categoryBig_Data code {
     background: rgb(206, 220, 190);
+    border: 1px solid rgb(79, 93, 62);
     color: inherit;
 }
 #page > header nav ul li.Coding a {
@@ -86,6 +87,7 @@ section#content.categoryCoding span.icon span.icon-tag:after {
 }
 section#content.categoryCoding code {
     background: rgb(167, 228, 214);
+    border: 1px solid rgb(39, 101, 87);
     color: inherit;
 }
 #page > header nav ul li.Linux a {
@@ -131,6 +133,7 @@ section#content.categoryLinux span.icon span.icon-tag:after {
 }
 section#content.categoryLinux code {
     background: rgb(186, 201, 225);
+    border: 1px solid rgb(59, 73, 97);
     color: inherit;
 }
 #page > header nav ul li.Security a {
@@ -176,6 +179,7 @@ section#content.categorySecurity span.icon span.icon-tag:after {
 }
 section#content.categorySecurity code {
     background: rgb(185, 167, 214);
+    border: 1px solid rgb(58, 39, 87);
     color: inherit;
 }
 #page > header nav ul li.Tools a {
@@ -221,5 +225,6 @@ section#content.categoryTools span.icon span.icon-tag:after {
 }
 section#content.categoryTools code {
     background: rgb(212, 180, 214);
+    border: 1px solid rgb(85, 52, 86);
     color: inherit;
 }

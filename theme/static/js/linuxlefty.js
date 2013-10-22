@@ -13,6 +13,14 @@ $(document).ready(function() {
     
     $(".defaultText").blur();        
 
+    $('.defaultTextForm').submit(function() {
+        $('.defaultText').each(function() {
+            if ($(this).val() == $(this)[0].title) {
+                $(this).val("");
+            }
+        })
+    })
+
 });
 
 $('section.boxes').imagesLoaded( function() {

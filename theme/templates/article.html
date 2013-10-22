@@ -32,12 +32,12 @@
         <h2>Contact Me</h2>
         <div class="entry-contact">
             <p>Was this helpful? Spot an error? Send me a comment!</p>
-            <form action="{{ SITEURL }}/mailer.php" method="POST">
+            <form action="{{ SITEURL }}/mailer.php" method="POST" id="feedback" class="defaultTextForm">
                 <input name="title" type="hidden" value="{{ article.title|striptags }}"/>
                 <input name="url" type="hidden" value="{{SITEURL}}/{{ article.url }}" />
 
                 <input name="name" type="text" title="Your name" class="defaultText name"/>
-                <input name="email" type="text" title="Your email" class="defaultText email"/>
+                <input name="email" type="text" title="Your email (so I can respond)" class="defaultText email"/>
 
                 <textarea cols="30" name="comment" rows="10" title="Type your comment here (all other fields optional)" class="defaultText"></textarea>
                 <input type="submit" type="submit" value="Send" />

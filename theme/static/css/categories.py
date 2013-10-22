@@ -110,6 +110,7 @@ section#content.category${label} span.icon span.icon-tag:after {
 }
 section#content.category${label} code {
     background: ${color_light};
+    border: 1px solid ${color_dark};
     color: inherit;
 }
 ''')

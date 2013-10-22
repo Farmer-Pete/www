@@ -4,7 +4,7 @@ $from_email = $_POST['email'] == '' ? Null : $_POST['email'];
 $result = array();
 $success = True;
 
-if ($_POST['name'] == '' || $_POST['name'] == 'Your name') {
+if ($_POST['name'] == '') {
     $from_name = Null;
     $result[] = 'Thanks for your message!';
 } else {
@@ -14,7 +14,7 @@ if ($_POST['name'] == '' || $_POST['name'] == 'Your name') {
 
 $result[] = 'I do read each and every email and appreciate your feedback :)';
 
-if ($_POST['email'] == '' || $_POST['email'] == 'Your email') {
+if ($_POST['email'] == '') {
     $from_email = Null;
     $result[] = "<em>Please note that you didn't provide an email address. I'll be sure to read your message, but I won't be able to reply to you.</em>";
 } else {
